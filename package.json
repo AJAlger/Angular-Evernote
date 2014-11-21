@@ -1,0 +1,21 @@
+{
+  "name": "evernote-express",
+  "version": "1.0.0",
+  "description": "Angular version of EverestJS and updated Express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Abdullah Alger",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.10.2",
+    "gulp": "^3.8.10",
+    "gulp-autoprefixer": "^2.0.0",
+    "gulp-jshint": "^1.9.0",
+    "gulp-minify-css": "^0.3.11",
+    "gulp-rename": "^1.2.0",
+    "gulp-ruby-sass": "^0.7.1",
+    "nodemon": "^1.2.1"
+  }
+}
