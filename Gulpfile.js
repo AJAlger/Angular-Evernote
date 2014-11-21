@@ -1,3 +1,12 @@
-var gulp = require('gulp'),
-		jshint = require('gulp-jshint'),
-		sass = require('gulp-ruby-sass');
+var gulp = require('gulp');
+
+gulp.task('express', function() {
+	var express = require('express');
+	var app = express();
+	app.use(express.static(__dirname + '/app'));
+	app.listen(8080);
+});
+
+gulp.task('default', ['express'], function() {
+
+});
