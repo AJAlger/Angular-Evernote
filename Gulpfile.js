@@ -1,41 +1,64 @@
 var gulp = require('gulp'),
-		sass = require('gulp-sass'),
-		autoprefixer = require('gulp-autoprefixer'),
-		minifycss = require('gulp-minify-css'),
-		rename = require('gulp-rename'),
+		sass = require('gulp-ruby-sass'),
+		uglify = require('gulp-uglify'),
+		livereload = require('gulp-livereload'),
+		plumber = require('gulp-plumber'),
 		neat = require('node-neat').includePaths;
+		// No need to load Bourbon here since Neat is included.
+		// I received errors when trying to load Bourbon by itself.
+		// Since Neat depends on Bourbon, loading Neat works just as well.
 
-
+// I chose to write all the paths as variables to use throughout.
+var express_port = 9000;
+var express_root = __dirname + '/app';
 var paths = {
-
-		sass: 'app/stylesheets/sass/',
-		css: 'app/stylesheets/css/',
-		script: 'app/scripts/'
-
+		sass: 'app/stylesheets/sass/', // Stylesheets folder for SASS
+		css: 'app/stylesheets/css/', // Stylesheets folder for CSS
+		script: 'app/scripts/' // Scripts folder for JS files
 };
 
+// Default Loader for Gulp with all tasks loaded
+gulp.task('default', ['express', 'styles', 'scripts', 'watch'], function() {});
 
+// Gulp Task to Run Express Server
 gulp.task('express', function() {
-	var express = require('express');
-	var app = express();
-	app.use(express.static(__dirname + '/app'));
-	app.listen(8080);
+	var express = require('express'); // Requires Express to run
+	var app = express(); // Uses app as the variable for ExpressJS
+	app.use(require('connect-livereload')()); // Need to check if this is necessary
+	app.use(express.static(express_root)); // Loads static page from /app directory
+	app.listen(express_port); // Listens on port 9000
 });
 
 
-// Gulp Task to SASS - Bourbon and Neat are working
+// Gulp Task to SASS - Bourbon and Neat are Working
+// Plumber Checks for Errors
 gulp.task('styles', function() {
-	return gulp.src(paths.sass + '*.scss')
-		.pipe(sass({
-			includePaths: ['styles'].concat(neat)
-		}))
-	.pipe(gulp.dest(paths.css))
+	return gulp.src(paths.sass + '*.scss') // Path to Stylesheets folder
+		.pipe(plumber()) // Checks for any errors and notifies if there are
+		.pipe(sass({loadPath: ['styles'].concat(neat)})) // Loading Bourbon and Neat
+		// loadPath when using gulp-ruby-sass must be used
+		// instead of includePaths when using gulp-sass
+		.pipe(gulp.dest(paths.css)) // CSS destination where it is expanded
+		.pipe(livereload()); // Reloading Gulp each time a change has been made
 });
 
+// Gulp Task to Check and Uglify Scripts
+// Plumber Checks for Errors
 gulp.task('scripts', function() {
-	return gulp.src(paths.script)
+	return gulp.src(paths.script + '*.js') // Path to Script folder
+		.pipe(plumber()) // Checks for any errors and notifies if there are
+		.pipe(uglify()) // Makes all scripts into a single line for minimizing file size
+		.pipe(gulp.dest('app/scripts/minjs')) // Puts files into and creates new Minjs folder
+		.pipe(livereload()); // Reloading Gulp each time a change has been made
 });
 
-gulp.task('default', ['express', 'styles'], function() {
 
+// Watching Folders and Files for Changes
+gulp.task('watch', function() {
+	var server = livereload(); // Livereload is loaded
+	gulp.watch(paths.script + '*.js', ['scripts']); // Watching Scripts folder
+	gulp.watch(paths.sass + '*.scss', ['styles']); // Watching Stylesheets folder
 });
+
+
+

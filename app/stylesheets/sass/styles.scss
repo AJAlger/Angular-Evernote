@@ -3,20 +3,20 @@ $visual-grid: true;
 @import "bourbon";
 @import "neat";
 
-$color: green;
+$color: #2dbe60;
 
 body {
   background-color : $color;
 
   .test {
     @include outer-container;
-    font-family: $lucida-grande;
+    font-family: Raleway, sans-serif;
+    font-weight: 100;
     @include span-columns(5);
     @include shift(3.5);
     text-align: center;
 
-
   }
-
 }
 
+@import "login";

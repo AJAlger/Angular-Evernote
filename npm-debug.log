@@ -1,0 +1,312 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '--save',
+1 verbose cli   'enml-js',
+1 verbose cli   'nodemon',
+1 verbose cli   'oauththrift' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.32
+4 warn package.json evernote-express@1.0.0 No description
+5 warn package.json evernote-express@1.0.0 No README data
+6 verbose readDependencies using package.json deps
+7 verbose cache add [ 'enml-js', null ]
+8 verbose cache add name=undefined spec="enml-js" args=["enml-js",null]
+9 verbose parsed url { protocol: null,
+9 verbose parsed url   slashes: null,
+9 verbose parsed url   auth: null,
+9 verbose parsed url   host: null,
+9 verbose parsed url   port: null,
+9 verbose parsed url   hostname: null,
+9 verbose parsed url   hash: null,
+9 verbose parsed url   search: null,
+9 verbose parsed url   query: null,
+9 verbose parsed url   pathname: 'enml-js',
+9 verbose parsed url   path: 'enml-js',
+9 verbose parsed url   href: 'enml-js' }
+10 verbose cache add [ 'nodemon', null ]
+11 verbose cache add name=undefined spec="nodemon" args=["nodemon",null]
+12 verbose parsed url { protocol: null,
+12 verbose parsed url   slashes: null,
+12 verbose parsed url   auth: null,
+12 verbose parsed url   host: null,
+12 verbose parsed url   port: null,
+12 verbose parsed url   hostname: null,
+12 verbose parsed url   hash: null,
+12 verbose parsed url   search: null,
+12 verbose parsed url   query: null,
+12 verbose parsed url   pathname: 'nodemon',
+12 verbose parsed url   path: 'nodemon',
+12 verbose parsed url   href: 'nodemon' }
+13 verbose cache add [ 'oauththrift', null ]
+14 verbose cache add name=undefined spec="oauththrift" args=["oauththrift",null]
+15 verbose parsed url { protocol: null,
+15 verbose parsed url   slashes: null,
+15 verbose parsed url   auth: null,
+15 verbose parsed url   host: null,
+15 verbose parsed url   port: null,
+15 verbose parsed url   hostname: null,
+15 verbose parsed url   hash: null,
+15 verbose parsed url   search: null,
+15 verbose parsed url   query: null,
+15 verbose parsed url   pathname: 'oauththrift',
+15 verbose parsed url   path: 'oauththrift',
+15 verbose parsed url   href: 'oauththrift' }
+16 silly lockFile 9a65c496-enml-js enml-js
+17 verbose lock enml-js /Users/Abdullah-Mac/.npm/9a65c496-enml-js.lock
+18 silly lockFile 1625b929-nodemon nodemon
+19 verbose lock nodemon /Users/Abdullah-Mac/.npm/1625b929-nodemon.lock
+20 silly lockFile 7967f94a-oauththrift oauththrift
+21 verbose lock oauththrift /Users/Abdullah-Mac/.npm/7967f94a-oauththrift.lock
+22 silly lockFile 9a65c496-enml-js enml-js
+23 silly lockFile 9a65c496-enml-js enml-js
+24 silly lockFile 1625b929-nodemon nodemon
+25 silly lockFile 1625b929-nodemon nodemon
+26 silly lockFile 7967f94a-oauththrift oauththrift
+27 silly lockFile 7967f94a-oauththrift oauththrift
+28 verbose addNamed [ 'enml-js', '' ]
+29 verbose addNamed [ null, '*' ]
+30 silly lockFile ab2f76a1-enml-js enml-js@
+31 verbose lock enml-js@ /Users/Abdullah-Mac/.npm/ab2f76a1-enml-js.lock
+32 verbose addNamed [ 'nodemon', '' ]
+33 verbose addNamed [ null, '*' ]
+34 silly lockFile 4f5e51c6-nodemon nodemon@
+35 verbose lock nodemon@ /Users/Abdullah-Mac/.npm/4f5e51c6-nodemon.lock
+36 verbose addNamed [ 'oauththrift', '' ]
+37 verbose addNamed [ null, '*' ]
+38 silly lockFile 269fb725-oauththrift oauththrift@
+39 verbose lock oauththrift@ /Users/Abdullah-Mac/.npm/269fb725-oauththrift.lock
+40 silly addNameRange { name: 'enml-js', range: '*', hasData: false }
+41 silly addNameRange { name: 'nodemon', range: '*', hasData: false }
+42 silly addNameRange { name: 'oauththrift', range: '*', hasData: false }
+43 verbose request where is /oauththrift
+44 verbose request registry https://registry.npmjs.org/
+45 verbose request id 6da0c506706e3f39
+46 verbose url raw /oauththrift
+47 verbose url resolving [ 'https://registry.npmjs.org/', './oauththrift' ]
+48 verbose url resolved https://registry.npmjs.org/oauththrift
+49 verbose request where is https://registry.npmjs.org/oauththrift
+50 info trying registry request attempt 1 at 11:57:18
+51 http GET https://registry.npmjs.org/oauththrift
+52 verbose request where is /enml-js
+53 verbose request registry https://registry.npmjs.org/
+54 verbose url raw /enml-js
+55 verbose url resolving [ 'https://registry.npmjs.org/', './enml-js' ]
+56 verbose url resolved https://registry.npmjs.org/enml-js
+57 verbose request where is https://registry.npmjs.org/enml-js
+58 info trying registry request attempt 1 at 11:57:18
+59 verbose etag "3W3Z7QCFD66GLK6KSPR51S0O6"
+60 http GET https://registry.npmjs.org/enml-js
+61 verbose request where is /nodemon
+62 verbose request registry https://registry.npmjs.org/
+63 verbose url raw /nodemon
+64 verbose url resolving [ 'https://registry.npmjs.org/', './nodemon' ]
+65 verbose url resolved https://registry.npmjs.org/nodemon
+66 verbose request where is https://registry.npmjs.org/nodemon
+67 info trying registry request attempt 1 at 11:57:18
+68 verbose etag "1FOYFQG9FSF2PK7OTWJW6RDSW"
+69 http GET https://registry.npmjs.org/nodemon
+70 http 304 https://registry.npmjs.org/nodemon
+71 silly registry.get cb [ 304,
+71 silly registry.get   { date: 'Sat, 22 Nov 2014 09:57:18 GMT',
+71 silly registry.get     server: 'Apache',
+71 silly registry.get     via: '1.1 varnish',
+71 silly registry.get     'last-modified': 'Sat, 22 Nov 2014 09:57:18 GMT',
+71 silly registry.get     'cache-control': 'max-age=60',
+71 silly registry.get     etag: '"1FOYFQG9FSF2PK7OTWJW6RDSW"',
+71 silly registry.get     age: '2',
+71 silly registry.get     'x-served-by': 'cache-lcy1125-LCY',
+71 silly registry.get     'x-cache': 'HIT',
+71 silly registry.get     'x-cache-hits': '1',
+71 silly registry.get     'x-timer': 'S1416650238.359765,VS0,VE0',
+71 silly registry.get     vary: 'Accept',
+71 silly registry.get     'content-length': '0',
+71 silly registry.get     'keep-alive': 'timeout=10, max=50',
+71 silly registry.get     connection: 'Keep-Alive' } ]
+72 verbose etag https://registry.npmjs.org/nodemon from cache
+73 silly addNameRange number 2 { name: 'nodemon', range: '*', hasData: true }
+74 silly addNameRange versions [ 'nodemon',
+74 silly addNameRange   [ '0.1.4',
+74 silly addNameRange     '0.1.5',
+74 silly addNameRange     '0.1.6',
+74 silly addNameRange     '0.1.7',
+74 silly addNameRange     '0.1.8',
+74 silly addNameRange     '0.2.0',
+74 silly addNameRange     '0.2.1',
+74 silly addNameRange     '0.2.2',
+74 silly addNameRange     '0.3.0',
+74 silly addNameRange     '0.3.1',
+74 silly addNameRange     '0.3.2',
+74 silly addNameRange     '0.4.0',
+74 silly addNameRange     '0.4.1',
+74 silly addNameRange     '0.5.0',
+74 silly addNameRange     '0.5.1',
+74 silly addNameRange     '0.5.2',
+74 silly addNameRange     '0.5.3',
+74 silly addNameRange     '0.5.4',
+74 silly addNameRange     '0.5.5',
+74 silly addNameRange     '0.5.6',
+74 silly addNameRange     '0.5.7',
+74 silly addNameRange     '0.6.0',
+74 silly addNameRange     '0.6.1',
+74 silly addNameRange     '0.6.2',
+74 silly addNameRange     '0.6.3',
+74 silly addNameRange     '0.6.4',
+74 silly addNameRange     '0.6.5',
+74 silly addNameRange     '0.6.6',
+74 silly addNameRange     '0.6.7',
+74 silly addNameRange     '0.6.8',
+74 silly addNameRange     '0.6.9',
+74 silly addNameRange     '0.6.10',
+74 silly addNameRange     '0.6.11',
+74 silly addNameRange     '0.6.12',
+74 silly addNameRange     '0.6.13',
+74 silly addNameRange     '0.6.14',
+74 silly addNameRange     '0.6.15',
+74 silly addNameRange     '0.6.16',
+74 silly addNameRange     '0.6.17',
+74 silly addNameRange     '0.6.18',
+74 silly addNameRange     '0.6.19',
+74 silly addNameRange     '0.6.20',
+74 silly addNameRange     '0.6.21',
+74 silly addNameRange     '0.6.22',
+74 silly addNameRange     '0.6.23',
+74 silly addNameRange     '0.7.0',
+74 silly addNameRange     '0.7.1',
+74 silly addNameRange     '0.7.2',
+74 silly addNameRange     '0.7.3',
+74 silly addNameRange     '0.7.4',
+74 silly addNameRange     '0.7.5',
+74 silly addNameRange     '0.7.6',
+74 silly addNameRange     '0.7.7',
+74 silly addNameRange     '0.7.8',
+74 silly addNameRange     '0.7.10',
+74 silly addNameRange     '0.9.0',
+74 silly addNameRange     '0.9.1',
+74 silly addNameRange     '0.9.2',
+74 silly addNameRange     '0.9.3',
+74 silly addNameRange     '0.9.5',
+74 silly addNameRange     '0.9.6',
+74 silly addNameRange     '0.9.7',
+74 silly addNameRange     '0.9.10',
+74 silly addNameRange     '0.9.11',
+74 silly addNameRange     '0.9.12',
+74 silly addNameRange     '0.9.14',
+74 silly addNameRange     '0.9.16',
+74 silly addNameRange     '0.9.17',
+74 silly addNameRange     '1.0.0',
+74 silly addNameRange     '1.0.1',
+74 silly addNameRange     '1.0.2',
+74 silly addNameRange     '1.0.2-rc',
+74 silly addNameRange     '0.6.10-a',
+74 silly addNameRange     '1.0.2-rc3',
+74 silly addNameRange     '1.0.2-rc4',
+74 silly addNameRange     '1.0.3',
+74 silly addNameRange     '1.0.4',
+74 silly addNameRange     '1.0.5',
+74 silly addNameRange     '1.0.6',
+74 silly addNameRange     '1.0.7',
+74 silly addNameRange     '1.0.8',
+74 silly addNameRange     '1.0.9',
+74 silly addNameRange     '1.0.10',
+74 silly addNameRange     '1.0.11',
+74 silly addNameRange     '1.0.12',
+74 silly addNameRange     '1.0.13',
+74 silly addNameRange     '1.0.14',
+74 silly addNameRange     '1.0.15',
+74 silly addNameRange     '1.0.16',
+74 silly addNameRange     '1.0.17-rc1',
+74 silly addNameRange     '1.0.17-rc2',
+74 silly addNameRange     '1.0.17',
+74 silly addNameRange     '1.0.18',
+74 silly addNameRange     '1.0.19',
+74 silly addNameRange     '1.0.20',
+74 silly addNameRange     '1.1.0-alpha',
+74 silly addNameRange     '1.1.0',
+74 silly addNameRange     '1.1.1',
+74 silly addNameRange     '1.2.0',
+74 silly addNameRange     '1.2.1' ] ]
+75 verbose addNamed [ 'nodemon', '1.2.1' ]
+76 verbose addNamed [ '1.2.1', '1.2.1' ]
+77 silly lockFile 891e98f0-nodemon-1-2-1 nodemon@1.2.1
+78 verbose lock nodemon@1.2.1 /Users/Abdullah-Mac/.npm/891e98f0-nodemon-1-2-1.lock
+79 silly lockFile 891e98f0-nodemon-1-2-1 nodemon@1.2.1
+80 silly lockFile 891e98f0-nodemon-1-2-1 nodemon@1.2.1
+81 silly lockFile 4f5e51c6-nodemon nodemon@
+82 silly lockFile 4f5e51c6-nodemon nodemon@
+83 http 304 https://registry.npmjs.org/enml-js
+84 silly registry.get cb [ 304,
+84 silly registry.get   { date: 'Sat, 22 Nov 2014 09:57:18 GMT',
+84 silly registry.get     server: 'Apache',
+84 silly registry.get     via: '1.1 varnish',
+84 silly registry.get     'last-modified': 'Sat, 22 Nov 2014 09:57:18 GMT',
+84 silly registry.get     'cache-control': 'max-age=60',
+84 silly registry.get     etag: '"3W3Z7QCFD66GLK6KSPR51S0O6"',
+84 silly registry.get     age: '0',
+84 silly registry.get     'x-served-by': 'cache-lcy1128-LCY',
+84 silly registry.get     'x-cache': 'MISS',
+84 silly registry.get     'x-cache-hits': '0',
+84 silly registry.get     'x-timer': 'S1416650238.384929,VS0,VE90',
+84 silly registry.get     vary: 'Accept',
+84 silly registry.get     'content-length': '0',
+84 silly registry.get     'keep-alive': 'timeout=10, max=50',
+84 silly registry.get     connection: 'Keep-Alive' } ]
+85 verbose etag https://registry.npmjs.org/enml-js from cache
+86 silly addNameRange number 2 { name: 'enml-js', range: '*', hasData: true }
+87 silly addNameRange versions [ 'enml-js', [ '0.0.1', '0.0.2', '0.0.3', '0.1.3' ] ]
+88 verbose addNamed [ 'enml-js', '0.1.3' ]
+89 verbose addNamed [ '0.1.3', '0.1.3' ]
+90 silly lockFile a4cb058a-enml-js-0-1-3 enml-js@0.1.3
+91 verbose lock enml-js@0.1.3 /Users/Abdullah-Mac/.npm/a4cb058a-enml-js-0-1-3.lock
+92 silly lockFile a4cb058a-enml-js-0-1-3 enml-js@0.1.3
+93 silly lockFile a4cb058a-enml-js-0-1-3 enml-js@0.1.3
+94 silly lockFile ab2f76a1-enml-js enml-js@
+95 silly lockFile ab2f76a1-enml-js enml-js@
+96 http 404 https://registry.npmjs.org/oauththrift
+97 verbose headers { date: 'Sat, 22 Nov 2014 09:57:19 GMT',
+97 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+97 verbose headers   'content-type': 'application/json',
+97 verbose headers   'cache-control': 'max-age=0',
+97 verbose headers   'content-length': '52',
+97 verbose headers   'accept-ranges': 'bytes',
+97 verbose headers   via: '1.1 varnish',
+97 verbose headers   age: '0',
+97 verbose headers   'x-served-by': 'cache-lcy1131-LCY',
+97 verbose headers   'x-cache': 'MISS',
+97 verbose headers   'x-cache-hits': '0',
+97 verbose headers   'x-timer': 'S1416650238.378000,VS0,VE624',
+97 verbose headers   'keep-alive': 'timeout=10, max=50',
+97 verbose headers   connection: 'Keep-Alive' }
+98 silly registry.get cb [ 404,
+98 silly registry.get   { date: 'Sat, 22 Nov 2014 09:57:19 GMT',
+98 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+98 silly registry.get     'content-type': 'application/json',
+98 silly registry.get     'cache-control': 'max-age=0',
+98 silly registry.get     'content-length': '52',
+98 silly registry.get     'accept-ranges': 'bytes',
+98 silly registry.get     via: '1.1 varnish',
+98 silly registry.get     age: '0',
+98 silly registry.get     'x-served-by': 'cache-lcy1131-LCY',
+98 silly registry.get     'x-cache': 'MISS',
+98 silly registry.get     'x-cache-hits': '0',
+98 silly registry.get     'x-timer': 'S1416650238.378000,VS0,VE624',
+98 silly registry.get     'keep-alive': 'timeout=10, max=50',
+98 silly registry.get     connection: 'Keep-Alive' } ]
+99 silly lockFile 269fb725-oauththrift oauththrift@
+100 silly lockFile 269fb725-oauththrift oauththrift@
+101 error 404 404 Not Found: oauththrift
+101 error 404
+101 error 404 'oauththrift' is not in the npm registry.
+101 error 404 You should bug the author to publish it
+101 error 404 It was specified as a dependency of 'evernote-express'
+101 error 404
+101 error 404 Note that you can also install from a
+101 error 404 tarball, folder, or http url, or git url.
+102 error System Darwin 13.4.0
+103 error command "node" "/usr/local/bin/npm" "install" "--save" "enml-js" "nodemon" "oauththrift"
+104 error cwd /Users/Abdullah-Mac/code/evernote-express
+105 error node -v v0.10.32
+106 error npm -v 1.4.28
+107 error code E404
+108 verbose exit [ 1, true ]
