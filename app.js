@@ -22,7 +22,6 @@ app.configure(function(){
     });
 
     app.use(app.router);
-    app.use(require('less-middleware')({src: __dirname + '/app'}));
     app.use(express.static(path.join(__dirname, 'app')));
 });
 

@@ -1,0 +1,19 @@
+{
+  "name": "evernote-express",
+  "version": "0.0.0",
+  "homepage": "https://github.com/AbdullahAlger/Angular-Evernote",
+  "authors": [
+    "Abdullah Alger <abdullahalger@me.com>"
+  ],
+  "moduleType": [
+    "amd",
+    "es6",
+    "globals",
+    "node",
+    "yui"
+  ],
+  "license": "MIT",
+  "dependencies": {
+
+  }
+}

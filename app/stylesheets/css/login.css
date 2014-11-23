@@ -1,0 +1,36 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.container {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%; }
+  .container:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .container:last-child {
+    margin-right: 0; }
+
+.description {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 57.35098%; }
+  .description:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .description:last-child {
+    margin-right: 0; }
+
+/*# sourceMappingURL=login.css.map */

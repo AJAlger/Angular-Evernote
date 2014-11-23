@@ -33,7 +33,7 @@ gulp.task('express', function() {
 // Gulp Task to SASS - Bourbon and Neat are Working
 // Plumber Checks for Errors
 gulp.task('styles', function() {
-	return gulp.src(paths.sass + '*.scss') // Path to Stylesheets folder
+	return gulp.src(paths.sass + '*.scss') // Path to Stylesheets folder and files
 		.pipe(plumber()) // Checks for any errors and notifies if there are
 		.pipe(sass({loadPath: ['styles'].concat(neat)})) // Loading Bourbon and Neat
 		// loadPath when using gulp-ruby-sass must be used
