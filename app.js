@@ -1,41 +1,51 @@
-// Module dependencies
-var express = require('express'),
-    routes = require('./routes'),
-    http = require('http'),
-    path = require('path');
-
+// BASE SETUP
+var express = require('express');
 var app = express();
+var bodyParser = require('body-parser');
+var routes = require('./app/routes');
+var cookieParser = require('cookie-parser');
+var session = require('express-session');
+var methodOverride = require('method-override');
+var morgan = require('morgan');
+var serveStatic = require('serve-static');
 
-// Configurations
-app.configure(function(){
-    app.set('port', process.env.PORT || 9000);
-    app.set('views', __dirname + '/app');
-    app.use(express.favicon());
-    app.use(express.logger('dev'));
-    app.use(express.bodyParser());
-    app.use(express.methodOverride());
-    app.use(express.cookieParser('secret'));
-    app.use(express.session());
-    app.use(function(req, res, next) {
-        res.locals.session = req.session;
-        next();
-    });
+var port = process.env.PORT || 9000; // PORT
 
-    app.use(app.router);
-    app.use(express.static(path.join(__dirname, 'app')));
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+app.use(serveStatic('/app')); // Where the files are
+app.use(methodOverride());
+app.use(morgan('dev'));
+app.use(cookieParser('secret'));
+app.use(session({
+    secret: 'evernote now',
+    resave: true,
+    saveUninitialized: true
+    }));
+app.use(function(req, res, next) {
+    res.locals.session = req.session;
+    next();
 });
 
-app.configure('development', function(){
-    app.use(express.errorHandler());
+
+// ROUTES FOR THE API - RAN IN THE ORDER LISTED
+var router = express.Router();
+
+// Middleware
+router.use(function(req, res, next) {
+    console.log('Middleware Active ... what next?');
+    next();
 });
 
-// Routes
-app.get('/', routes.index);
-app.get('/oauth', routes.oauth);
-app.get('/oauth_callback', routes.oauth_callback);
-app.get('/clear', routes.clear);
-
-// Run
-http.createServer(app).listen(app.get('port'), function(){
-    console.log("Express server listening on port " + app.get('port'));
+// ------------- ROUTE 1 ---------------- //
+router.get('/', function(req, res) {
+    res.json({message: 'I am a route and I am alive!'});
 });
+
+
+// REGISTERING THE ROUTES
+app.use('/api', router);
+
+// STARTING THE SERVER
+app.listen(port);
+console.log('Port: ' + port + ' is activated');

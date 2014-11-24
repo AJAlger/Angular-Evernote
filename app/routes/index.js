@@ -1,7 +1,7 @@
 var Evernote = require('evernote').Evernote;
 
-var config = require('../config.json');
-var callbackUrl = "http://localhost:3000/oauth_callback";
+var config = require('../../config.json');
+var callbackUrl = "http://localhost:9000/oauth_callback";
 
 // home page
 exports.index = function(req, res) {
