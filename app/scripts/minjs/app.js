@@ -1,1 +1,1 @@
-var evernote=angular.module("everNote",["ui.router"]);evernote.controller("login",function(e){e.test=function(){console.log("angular working")}});
+var evernote=angular.module("everNote",["ui.router"]);evernote.controller("login",function(){});
