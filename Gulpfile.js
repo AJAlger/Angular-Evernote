@@ -4,6 +4,7 @@ var gulp = require('gulp'),
 		livereload = require('gulp-livereload'),
 		plumber = require('gulp-plumber'),
 		neat = require('node-neat').includePaths;
+		myApp = require('./app.js');
 		// No need to load Bourbon here since Neat is included.
 		// I received errors when trying to load Bourbon by itself.
 		// Since Neat depends on Bourbon, loading Neat works just as well.
@@ -22,11 +23,7 @@ gulp.task('default', ['express', 'styles', 'scripts', 'watch'], function() {});
 
 // Gulp Task to Run Express Server
 gulp.task('express', function() {
-	var express = require('express'); // Requires Express to run
-	var app = express(); // Uses app as the variable for ExpressJS
-	app.use(require('connect-livereload')()); // Need to check if this is necessary
-	app.use(express.static(express_root)); // Loads static page from /app directory
-	app.listen(express_port); // Listens on port 9000
+	myApp.listen(express_port);
 });
 
 

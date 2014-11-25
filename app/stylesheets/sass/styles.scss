@@ -1,23 +1,69 @@
-$visual-grid: true;
-
 @import "bourbon";
 @import "neat";
 
 
-$color: #2dbe60;
+.textarea1 {
+  @include outer-container;
+  font-family: 'Nixie One', cursive;
+  text-align: center;
+  font-size: 4em;
+  color: green;
+  @include padding(30px null 30px null);
+}
 
-body {
-  background-color : $color;
+textarea {
+  font-family: 'Nixie One', cursive;
 
-  .test {
-    @include outer-container;
-    font-family: Raleway, sans-serif;
-    font-weight: 100;
-    @include span-columns(5);
-    @include shift(3.5);
-    text-align: center;
+}
+
+.textarea2 {
+  @include outer-container;
+
+  .speech-box {
+    border: 1px solid green;
+    @include size(auto 200px);
+    @include span-columns(7);
+    @include shift(2.5);
+    @include padding(null null 50px null);
+    font-size: 1.2em;
 
   }
+
+  .text-buttons {
+    @include span-columns(7);
+    @include shift(2.5);
+    text-align: center;
+
+
+    .button1 {
+      @include button(#fff);
+      font-family: 'Nixie One', cursive;
+      @include omega();
+      color: green;
+      margin-right: 10px;
+      background-color: white;
+    }
+
+    .button2 {
+      @include button(#fff);
+      font-family: 'Nixie One', cursive;
+      @include omega();
+      color: green;
+      background-color: white;
+    }
+  }
+  .subtext {
+    font-family: 'Nixie One', cursive;
+    font-size: 1.5em;
+    text-align: center;
+    @include padding(20px null 20px null);
+    @include span-columns(7);
+    @include shift(2.5);
+  }
 }
+
+
+
+
 
 

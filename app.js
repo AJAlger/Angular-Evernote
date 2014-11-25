@@ -8,14 +8,13 @@ var express = require('express'),
     methodOverride = require('method-override'),
     morgan = require('morgan'),
     serveStatic = require('serve-static'),
-    errorHandler = require('errorhandler'),
-    favicon = require('serve-favicon');
+    errorHandler = require('errorhandler');
 
 
 // =========================CONFIGURATION===========================//
 // =================================================================//
-app.set('port', process.env.PORT || 9000);
-app.use(serveStatic('/app')); // Where the files are
+app.set('port', process.env.PORT || 9001); // Set to 9001 to not interfere with Gulp 9000
+app.use(serveStatic('app', { 'index': false })); // Where the files and gets login.html first
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(methodOverride());
@@ -43,12 +42,15 @@ router.get('/', routes.index);
 router.get('/oauth', routes.oauth);
 router.get('/oauth_callback', routes.oauth_callback);
 router.get('/clear', routes.clear);
+router.get('/note')
+
+
 
 // REGISTERING THE ROUTES
 app.use('/', router);
 
 // STARTING THE SERVER
-app.listen(app.get('port'));
-console.log('Serving on port ' + app.get('port') + '. Serving more Nodes than Big Macs!');
 
-exports = module.exports = app;
+console.log('Serving on port ' + app.get('port') + '. Serving more Nodes than Big Macs!');
+app.listen(app.get('port')); // Not used if Gulp is activated - it is bypassed
+exports = module.exports = app; // This is needed otherwise the index.js for routes will not work

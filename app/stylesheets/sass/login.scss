@@ -1,12 +1,19 @@
+$visual-grid: true;
+
 @import "bourbon";
 @import "neat";
 
-.container {
-  @include outer-container;
-  @include span-columns(12);
-}
+body {
 
-.description {
-  @include outer-container;
-  @include span-columns(7);
+  background-color: #2dbe60;
+
+  .container {
+    @include outer-container;
+    @include span-columns(12);
+  }
+
+  .description {
+    @include outer-container;
+    @include span-columns(7);
+  }
 }

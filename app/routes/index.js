@@ -14,10 +14,10 @@ exports.index = function(req, res) {
         var noteStore = client.getNoteStore();
         noteStore.listNotebooks(function(err, notebooks){
             req.session.notebooks = notebooks;
-            res.sendFile('login.html', { root: './app' });
+            res.redirect('../index.html');
         });
     } else {
-        res.sendFile('login.html', { root: './app' });
+        res.redirect('../login.html');
     }
 };
 
