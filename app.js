@@ -38,11 +38,12 @@ var router = express.Router();
 // Put any Middleware here
 
 // ------------- ROUTES ---------------- //
-router.get('/', routes.index);
-router.get('/oauth', routes.oauth);
-router.get('/oauth_callback', routes.oauth_callback);
-router.get('/clear', routes.clear);
-router.get('/note')
+router.get('/');
+//router.get('/', routes.index);
+//router.get('/oauth', routes.oauth);
+//router.get('/oauth_callback', routes.oauth_callback);
+//router.get('/clear', routes.clear);
+//router.get('/note');
 
 
 
