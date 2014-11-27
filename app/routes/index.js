@@ -11,11 +11,7 @@ exports.index = function(req, res) {
             token: token,
             sandbox: config.SANDBOX
         });
-        var noteStore = client.getNoteStore();
-        noteStore.listNotebooks(function(err, notebooks){
-            req.session.notebooks = notebooks;
-            res.redirect('../index.html');
-        });
+        res.sendFile('index.html', {root: './app'});
     } else {
         res.redirect('../login.html');
     }
@@ -83,39 +79,28 @@ exports.clear = function(req, res) {
     res.redirect('/');
 };
 
-// CREATE A NOTE
-exports.create = function(req, res) {
-    if(req.session.oauthAccessToken) {
-        res.sendfile("views/create.html");
-    }else{
-        res.redirect('/');
-    }
-
-};
-
+// Send an Evernote Note
 exports.receive = function(req, res) {
     var token = req.session.oauthAccessToken;
     var client = new Evernote.Client({
         token: token,
         sandbox: config.SANDBOX
     });
-    var myBody = req.body.content;
+    var contentBody = req.body.content;
     var nBody = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>";
     nBody += "<!DOCTYPE en-note SYSTEM \"http://xml.evernote.com/pub/enml2.dtd\">";
-    nBody += "<en-note>" + myBody + "</en-note>";
+    nBody += "<en-note>" + contentBody + "</en-note>";
 
-    var ourNote = new Evernote.Note();
-    ourNote.title = req.body.title;
-    console.log("Create note:" + ourNote.title);
-    ourNote.content = nBody;
+    var note = new Evernote.Note();
+    note.content = nBody;
     console.log("Content:" + nBody);
 
     var noteStore = client.getNoteStore();
-    noteStore.createNote(ourNote, function(err, note) {
+    noteStore.createNote(note, function(err, notes) {
         if (err) {
             console.log(err);
         } else {
-            //callback(note);
+            //callback(notes);
         }
     });
 

@@ -1,7 +1,7 @@
 
 var evervoice = angular.module('evervoiceApp', []);
 
-evervoice.controller('myCtrl', ['$scope', 'voiceRecord', function($scope, voiceRecord) {
+evervoice.controller('myCtrl', ['$scope', 'voiceRecord', '$http', function($scope, voiceRecord, $http) {
 
 /////////////////// Text Box ////////////////////
 
@@ -23,11 +23,13 @@ evervoice.controller('myCtrl', ['$scope', 'voiceRecord', function($scope, voiceR
 /////////////////// Evernote Button ////////////////////
 
     $scope.createNote = function() {
-       var note = $scope.interimTranscript;
-        console.log('This is the note text: ' + note);
-    };
+        var data = $scope.interimTranscript;
+        $http.post('/receive', data).success(function(data, status, headers) {
+            console.log('Note Added');
 
-
+            });
+        console.log('post activated');
+        };
 }]);
 
 

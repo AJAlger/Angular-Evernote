@@ -56,9 +56,9 @@ router.use(function(req, res, next) {
 router.get('/', routes.index);
 router.get('/oauth', routes.oauth);
 router.get('/oauth_callback', routes.oauth_callback);
-router.get('/clear', routes.clear);
-router.get('/create', routes.create);
 router.post('/receive', routes.receive);
+router.get('/clear', routes.clear);
+
 
 
 // REGISTERING THE ROUTES
