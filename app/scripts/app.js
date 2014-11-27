@@ -47,7 +47,7 @@ evervoice.service('voiceRecord', function() {
 
             var recognition = new webkitSpeechRecognition();
             var recognizing = true;
-            recognition.lang = [['English', ['en-US', 'United States']], ['Arabic (Egypt)', ['ar-EG']]];
+            recognition.lang = ['English', ['en-US', 'United States']];
             recognition.continuous = true;
             recognition.interimResults = true;
 
