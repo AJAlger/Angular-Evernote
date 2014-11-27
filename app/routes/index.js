@@ -1,7 +1,7 @@
 var Evernote = require('evernote').Evernote;
 
 var config = require('../../config.json');
-var callbackUrl = "http://localhost:9000/oauth_callback";
+var callbackUrl = "http://localhost:9001/oauth_callback";
 
 // home page
 exports.index = function(req, res) {
@@ -82,3 +82,45 @@ exports.clear = function(req, res) {
     req.session.destroy();
     res.redirect('/');
 };
+
+// CREATE A NOTE
+exports.create = function(req, res) {
+    if(req.session.oauthAccessToken) {
+        res.sendfile("views/create.html");
+    }else{
+        res.redirect('/');
+    }
+
+};
+
+exports.receive = function(req, res) {
+    var token = req.session.oauthAccessToken;
+    var client = new Evernote.Client({
+        token: token,
+        sandbox: config.SANDBOX
+    });
+    var myBody = req.body.content;
+    var nBody = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>";
+    nBody += "<!DOCTYPE en-note SYSTEM \"http://xml.evernote.com/pub/enml2.dtd\">";
+    nBody += "<en-note>" + myBody + "</en-note>";
+
+    var ourNote = new Evernote.Note();
+    ourNote.title = req.body.title;
+    console.log("Create note:" + ourNote.title);
+    ourNote.content = nBody;
+    console.log("Content:" + nBody);
+
+    var noteStore = client.getNoteStore();
+    noteStore.createNote(ourNote, function(err, note) {
+        if (err) {
+            console.log(err);
+        } else {
+            //callback(note);
+        }
+    });
+
+    console.log("create success");
+    res.redirect('/');
+};
+
+

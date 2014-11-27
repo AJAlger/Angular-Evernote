@@ -2,10 +2,10 @@
 var express = require('express'),
     app = express(),
     bodyParser = require('body-parser'),
-    routes = require('./app/routes'),
     cookieParser = require('cookie-parser'),
     session = require('express-session'),
     methodOverride = require('method-override'),
+    routes = require('./app/routes'),
     morgan = require('morgan'),
     serveStatic = require('serve-static'),
     errorHandler = require('errorhandler');
@@ -14,7 +14,7 @@ var express = require('express'),
 // =========================CONFIGURATION===========================//
 // =================================================================//
 app.set('port', process.env.PORT || 9001); // Set to 9001 to not interfere with Gulp 9000
-app.use(serveStatic('app', { 'index': false })); // Where the files and gets login.html first
+app.use(serveStatic('app', {'index': false})); // Where the files and gets login.html first
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(methodOverride());
@@ -26,25 +26,39 @@ app.use(function(req, res, next) {
     next();
 });
 
+
 if (process.env.NODE_ENV === 'development') {
     app.use(errorHandler());
 }
 // ==========================ROUTER=================================//
 // =================================================================//
 
-// ROUTES FOR THE API - RAN IN THE ORDER LISTED
+
+// ROUTES FOR THE API - RUN IN THE ORDER LISTED
+
 var router = express.Router();
 
-// Put any Middleware here
+// PUT ANY MIDDLEWARE HERE
+
+router.use(function(req, res, next) {
+
+    // log each request to the console
+    console.log(req.method, req.url);
+
+    // continue doing what we were doing and go to the route
+    next();
+});
+
 
 // ------------- ROUTES ---------------- //
-router.get('/');
-//router.get('/', routes.index);
-//router.get('/oauth', routes.oauth);
-//router.get('/oauth_callback', routes.oauth_callback);
-//router.get('/clear', routes.clear);
-//router.get('/note');
+// home page
 
+router.get('/', routes.index);
+router.get('/oauth', routes.oauth);
+router.get('/oauth_callback', routes.oauth_callback);
+router.get('/clear', routes.clear);
+router.get('/create', routes.create);
+router.post('/receive', routes.receive);
 
 
 // REGISTERING THE ROUTES
