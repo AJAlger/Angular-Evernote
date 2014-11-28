@@ -73,39 +73,45 @@ exports.oauth_callback = function(req, res) {
         });
 };
 
-// Clear session
-exports.clear = function(req, res) {
-    req.session.destroy();
-    res.redirect('/');
-};
 
 // Send an Evernote Note
-exports.receive = function(req, res) {
-    var token = req.session.oauthAccessToken;
-    var client = new Evernote.Client({
-        token: token,
-        sandbox: config.SANDBOX
-    });
-    var contentBody = req.body.content;
-    var nBody = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>";
-    nBody += "<!DOCTYPE en-note SYSTEM \"http://xml.evernote.com/pub/enml2.dtd\">";
-    nBody += "<en-note>" + contentBody + "</en-note>";
+exports.postNote = function(req, res) {
+    if (req.session.oauthAccessToken) {
+        var token = req.session.oauthAccessToken;
+        var client = new Evernote.Client({
+            token: token,
+            sandbox: config.SANDBOX
+        });
+        var note = new Evernote.Note();
 
-    var note = new Evernote.Note();
-    note.content = nBody;
-    console.log("Content:" + nBody);
+        var contentBody = req.body.contentBody;
 
-    var noteStore = client.getNoteStore();
-    noteStore.createNote(note, function(err, notes) {
-        if (err) {
-            console.log(err);
-        } else {
-            //callback(notes);
-        }
-    });
+        var nBody = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>";
+        nBody += "<!DOCTYPE en-note SYSTEM \"http://xml.evernote.com/pub/enml2.dtd\">";
+        nBody += "<en-note>" + contentBody + "</en-note>";
 
-    console.log("create success");
-    res.redirect('/');
+
+
+        note.content = nBody;
+        note.title = 'Sent from EverVoice';
+
+
+        console.log(contentBody);
+
+        var noteStore = client.getNoteStore();
+        noteStore.createNote(note, function (err, newNote) {
+            if (err) {
+                console.log(err);
+            } else {
+                //callback(newNote);
+                console.log("Successfully created a new note with GUID: " + newNote.guid);
+            }
+        });
+
+        console.log("create success");
+        res.redirect('/');
+
+    }
 };
 
 
