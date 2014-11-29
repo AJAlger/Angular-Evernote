@@ -8,7 +8,6 @@ evervoice.config(function($httpProvider) {
 evervoice.controller('myCtrl', ['$scope', 'voiceRecord', '$http', function($scope, voiceRecord, $http) {
 
 /////////////////// Text Box ////////////////////
-
     // Listener Pattern
     voiceRecord.setListener(function(value) { // WORKING LISTENER PATTERN
         $scope.$apply(function() {
@@ -16,23 +15,20 @@ evervoice.controller('myCtrl', ['$scope', 'voiceRecord', '$http', function($scop
             console.log('Transcript: ', $scope.interimTranscript);
         });
     });
-
 //////////////////// Dictate Button ////////////////////
-
     $scope.dictate = function() { // WORKING DICTATE BUTTON
         voiceRecord.startRecognition();
-
     };
-
 /////////////////// Evernote Button ////////////////////
-
    $scope.createNote = function() { // WORKING POST BUTTON
-
        var speechText = JSON.stringify({content: $scope.interimTranscript});
-
        $http.post('/postNote', speechText)
-           .success(function (speechText, status){})
-           .error(function (speechText, status){});
+           .success(function (speechText, status){
+               console.log('success', status);
+           })
+           .error(function (speechText, status){
+               console.log('error', status);
+           });
 
        // $http({
        //   method: 'POST',
@@ -50,9 +46,7 @@ evervoice.controller('myCtrl', ['$scope', 'voiceRecord', '$http', function($scop
 
 }]);
 
-
-
-
+/////////////////// Web Speech API ////////////////////
 evervoice.service('voiceRecord', function() {
 
     var recognitionListener;

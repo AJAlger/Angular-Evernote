@@ -73,7 +73,6 @@ exports.oauth_callback = function(req, res) {
         });
 };
 
-
 // Send an Evernote Note
 exports.postNote = function(req, res) {
     if (req.session.oauthAccessToken) {
