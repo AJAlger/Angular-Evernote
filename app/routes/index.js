@@ -82,21 +82,17 @@ exports.postNote = function(req, res) {
             token: token,
             sandbox: config.SANDBOX
         });
+
         var note = new Evernote.Note();
 
-        var contentBody = req.body.contentBody;
-
-        var nBody = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>";
-        nBody += "<!DOCTYPE en-note SYSTEM \"http://xml.evernote.com/pub/enml2.dtd\">";
-        nBody += "<en-note>" + contentBody + "</en-note>";
-
-
-
-        note.content = nBody;
+        var nBody = req.body.content;
         note.title = 'Sent from EverVoice';
 
+        note.content = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>";
+        note.content += "<!DOCTYPE en-note SYSTEM \"http://xml.evernote.com/pub/enml2.dtd\">";
+        note.content += "<en-note>" + nBody + "</en-note>";
 
-        console.log(contentBody);
+        console.log('This is the content body: ' + nBody);
 
         var noteStore = client.getNoteStore();
         noteStore.createNote(note, function (err, newNote) {

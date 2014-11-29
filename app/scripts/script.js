@@ -2,7 +2,6 @@
 var evervoice = angular.module('evervoiceApp', []);
 
 evervoice.config(function($httpProvider) {
-    $httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
    console.log($httpProvider.defaults.headers.post);
 });
 
@@ -29,13 +28,16 @@ evervoice.controller('myCtrl', ['$scope', 'voiceRecord', '$http', function($scop
 
    $scope.createNote = function() {
 
+       var speech = JSON.stringify({content: $scope.interimTranscript});
+
     $http({
+
         method: 'POST',
         url: '/postNote',
-        data: $scope.interimTranscript,
-        headers: {'Content-Type': 'application/x-www-form-urlencoded'}})
+        data: speech})
         .success(function(data, status) {
-        console.log('success', status);})
+        console.log('success', status);
+        console.log(data);})
         .error(function(data, status) {
         console.log('error', status);
         console.log(data);
