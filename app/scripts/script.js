@@ -10,7 +10,7 @@ evervoice.controller('myCtrl', ['$scope', 'voiceRecord', '$http', function($scop
 /////////////////// Text Box ////////////////////
 
     // Listener Pattern
-    voiceRecord.setListener(function(value) {
+    voiceRecord.setListener(function(value) { // WORKING LISTENER PATTERN
         $scope.$apply(function() {
             $scope.interimTranscript = value;
             console.log('Transcript: ', $scope.interimTranscript);
@@ -19,29 +19,33 @@ evervoice.controller('myCtrl', ['$scope', 'voiceRecord', '$http', function($scop
 
 //////////////////// Dictate Button ////////////////////
 
-    $scope.dictate = function() {
+    $scope.dictate = function() { // WORKING DICTATE BUTTON
         voiceRecord.startRecognition();
 
     };
 
 /////////////////// Evernote Button ////////////////////
 
-   $scope.createNote = function() {
+   $scope.createNote = function() { // WORKING POST BUTTON
 
-       var speech = JSON.stringify({content: $scope.interimTranscript});
+       var speechText = JSON.stringify({content: $scope.interimTranscript});
 
-    $http({
+       $http.post('/postNote', speechText)
+           .success(function (speechText, status){})
+           .error(function (speechText, status){});
 
-        method: 'POST',
-        url: '/postNote',
-        data: speech})
-        .success(function(data, status) {
-        console.log('success', status);
-        console.log(data);})
-        .error(function(data, status) {
-        console.log('error', status);
-        console.log(data);
-    });
+       // $http({
+       //   method: 'POST',
+       // url: '/postNote',
+       //  data: speechText})
+       //  .success(function(data, status) {
+       //  console.log('success', status);
+       //  console.log(data);})
+       //   .error(function(data, status) {
+       //   console.log('error', status);
+       //    console.log(data);
+       // });
+       // };
    };
 
 }]);

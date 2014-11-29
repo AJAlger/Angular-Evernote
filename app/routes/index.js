@@ -92,7 +92,7 @@ exports.postNote = function(req, res) {
         note.content += "<!DOCTYPE en-note SYSTEM \"http://xml.evernote.com/pub/enml2.dtd\">";
         note.content += "<en-note>" + nBody + "</en-note>";
 
-        console.log('This is the content body: ' + nBody);
+        console.log('Note sent: ' + nBody);
 
         var noteStore = client.getNoteStore();
         noteStore.createNote(note, function (err, newNote) {
