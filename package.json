@@ -8,6 +8,7 @@
   },
   "scripts": {
     "start": "gulp",
+    "postinstall": "node node_modules/.bin/gulp default",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
