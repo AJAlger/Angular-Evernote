@@ -7,8 +7,8 @@
     "node": "0.10.x"
   },
   "scripts": {
-    "start": "gulp",
-    "postinstall": "node node_modules/.bin/gulp default",
+    "start": "node app.js",
+    "postinstall": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
