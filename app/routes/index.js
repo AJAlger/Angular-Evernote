@@ -11,7 +11,7 @@ exports.index = function(req, res) {
             token: token,
             sandbox: config.SANDBOX
         });
-        res.sendFile('index.html', {root: './app'}); //res.render
+        res.render('index'); //res.render
     } else {
         res.redirect('../login.html');
     }
