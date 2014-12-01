@@ -14,10 +14,7 @@ var express = require('express'),
 // =========================CONFIGURATION===========================//
 // =================================================================//
 app.set('port', process.env.PORT || 9001); // Set to 9001 to not interfere with Gulp 9000
-
 app.use(serveStatic('app', {'index': false})); // Where the files and gets login.html first
-app.set('views', __dirname + '/app');
-app.set('view engine', 'html');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(methodOverride());

@@ -1,7 +1,7 @@
 var Evernote = require('evernote').Evernote;
 
 var config = require('../../config.json');
-var callbackUrl = "/oauth_callback";
+var callbackUrl = "https://evervoice-app.herokuapp.com/oauth_callback";
 
 // home page
 exports.index = function(req, res) {
@@ -11,7 +11,7 @@ exports.index = function(req, res) {
             token: token,
             sandbox: config.SANDBOX
         });
-        res.render('index'); //res.render
+        res.sendFile('index.html', {root: './app'}); //res.render
     } else {
         res.redirect('../login.html');
     }
