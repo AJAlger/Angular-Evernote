@@ -51,7 +51,6 @@ router.use(function(req, res, next) {
 
 
 // ------------- ROUTES ---------------- //
-// home page
 
 router.get('/', routes.index);
 router.get('/oauth', routes.oauth);

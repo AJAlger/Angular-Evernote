@@ -48,7 +48,6 @@ gulp.task('scripts', function() {
 		.pipe(livereload()); // Reloading Gulp each time a change has been made
 });
 
-
 // Watching Folders and Files for Changes
 gulp.task('watch', function() {
 	var server = livereload(); // Livereload is loaded
