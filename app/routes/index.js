@@ -98,7 +98,7 @@ exports.postNote = function(req, res) {
             if (err) {
                 console.log(err);
             } else {
-                //callback(newNote);
+
                 console.log("Successfully created a new note with GUID: " + newNote.guid);
             }
         });
