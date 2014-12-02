@@ -1,4 +1,4 @@
-$visual-grid: true;
+$visual-grid: false;
 
 @import "bourbon";
 @import "neat";
@@ -7,13 +7,20 @@ body {
 
   background-color: #2dbe60;
 
-  .container {
-    @include outer-container;
-    @include span-columns(12);
-  }
+  #particles-js {
+    height: 100%;
+    width: 100%;
 
-  .description {
-    @include outer-container;
-    @include span-columns(7);
+    .container {
+      @include span-columns(12);
+    }
+
+    .login-panel {
+      @include outer-container;
+      @include span-columns(4);
+      @include shift(4);
+      text-align: center;
+      @include position(fixed, 420px null null null);
+    }
   }
 }
