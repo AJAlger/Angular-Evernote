@@ -14,6 +14,6 @@
   ],
   "license": "MIT",
   "dependencies": {
-
+    "paper-button": "Polymer/paper-button#~0.5.1"
   }
 }

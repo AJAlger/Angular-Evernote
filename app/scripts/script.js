@@ -46,6 +46,8 @@ evervoice.controller('myCtrl', ['$scope', 'voiceRecord', '$http', function($scop
 
 }]);
 
+
+
 /////////////////// Web Speech API ////////////////////
 evervoice.service('voiceRecord', function() {
 

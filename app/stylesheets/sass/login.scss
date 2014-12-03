@@ -27,18 +27,18 @@ body {
 
     }
 
-    .container {
-      @include span-columns(12);
-    }
-
     .login-panel {
       @include outer-container;
-      @include span-columns(4);
-      @include shift(4);
+      @include span-columns(2);
+      @include shift(5);
       text-align: center;
       @include position(fixed, 420px null null null);
       font-family: $font;
-      color: $font-color;
+      color: #fff;
+      padding: 10px;
+      font-size: 1.2em;
+      background-color: #DDDDDD;
     }
   }
 }
+
