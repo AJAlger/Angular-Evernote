@@ -43,10 +43,10 @@ body {
       position: fixed;
       top: 420px;
       font-family: "Nixie one", cursive;
-      color: #fff;
+      color: #333333;
       padding: 10px;
       font-size: 1.2em;
-      background-color: #DDDDDD; }
+      background-color: #fff; }
       body #particles-js .login-panel:after {
         content: "";
         display: table;

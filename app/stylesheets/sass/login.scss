@@ -34,10 +34,10 @@ body {
       text-align: center;
       @include position(fixed, 420px null null null);
       font-family: $font;
-      color: #fff;
+      color: #333333;
       padding: 10px;
       font-size: 1.2em;
-      background-color: #DDDDDD;
+      background-color: #fff;
     }
   }
 }
