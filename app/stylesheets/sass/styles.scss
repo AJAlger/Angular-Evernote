@@ -1,18 +1,23 @@
+$visual-grid: false;
+
 @import "bourbon";
 @import "neat";
 
 
+$font: 'Nixie One', cursive;
+$color: #2dbe60;
+
 .textarea1 {
   @include outer-container;
-  font-family: 'Nixie One', cursive;
+  font-family: $font;
   text-align: center;
   font-size: 4em;
-  color: green;
+  color: $color;
   @include padding(30px null 30px null);
 }
 
 textarea {
-  font-family: 'Nixie One', cursive;
+  font-family: $font;
 
 }
 
@@ -20,7 +25,7 @@ textarea {
   @include outer-container;
 
   .speech-box {
-    border: 1px solid green;
+    border: 1px solid $color;
     @include size(auto 200px);
     @include span-columns(7);
     @include shift(2.5);
@@ -30,30 +35,64 @@ textarea {
   }
 
   .text-buttons {
-    @include span-columns(7);
-    @include shift(2.5);
+    @include span-columns(8);
+    @include shift(2);
+
+    @include position(relative, 50px null null null);
+
+
+
+  .button1 {
+    @include omega();
+    @include span-columns(3);
+    @include shift(2.7);
     text-align: center;
+    font-family: $font;
+    color: #fff;
+    padding: 10px;
+    font-size: 1.2em;
+    background-color: $color;
+    @include border-top-radius(5px);
+    @include border-bottom-radius(5px);
+    -webkit-box-shadow: 0 3px 7px 1px rgba(130,130,130,0.75);
+    -moz-box-shadow: 0 3px 7px 1px rgba(130,130,130,0.75);
+    box-shadow: 0 3px 7px 1px rgba(130,130,130,0.75);
+    margin-right: 50px;
 
 
-    .button1 {
-      @include button(#fff);
-      font-family: 'Nixie One', cursive;
-      @include omega();
-      color: green;
-      margin-right: 10px;
-      background-color: white;
-    }
+
+  }
 
     .button2 {
-      @include button(#fff);
-      font-family: 'Nixie One', cursive;
+      @include span-columns(3);
       @include omega();
-      color: green;
-      background-color: white;
+      text-align: center;
+      font-family: $font;
+      color: #fff;
+      padding: 10px;
+      font-size: 1.2em;
+      background-color: $color;
+      @include border-top-radius(5px);
+      @include border-bottom-radius(5px);
+      -webkit-box-shadow: 0 3px 7px 1px rgba(130,130,130,0.75);
+      -moz-box-shadow: 0 3px 7px 1px rgba(130,130,130,0.75);
+      box-shadow: 0 3px 7px 1px rgba(130,130,130,0.75);
+
+
+
+
+
+
+
+
+
     }
+
   }
+
+
   .subtext {
-    font-family: 'Nixie One', cursive;
+    font-family: $font;
     font-size: 1.5em;
     text-align: center;
     @include padding(20px null 20px null);
