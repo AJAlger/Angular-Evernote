@@ -4,7 +4,7 @@
   box-sizing: border-box; }
 
 body {
-  background-color: #2dbe60; }
+  background-color: #fff; }
   body #particles-js {
     height: 100%;
     width: 100%; }
@@ -21,7 +21,7 @@ body {
       text-align: center;
       position: fixed;
       top: 300px;
-      color: white;
+      color: #2dbe60;
       font-weight: 300;
       font-size: 3em; }
       body #particles-js .login-title:after {
@@ -43,15 +43,21 @@ body {
       position: fixed;
       top: 420px;
       font-family: "Nixie one", cursive;
-      color: #333333;
+      color: #fff;
       padding: 10px;
       font-size: 1.2em;
-      background-color: #fff; }
+      background-color: #2dbe60;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px; }
       body #particles-js .login-panel:after {
         content: "";
         display: table;
         clear: both; }
       body #particles-js .login-panel:last-child {
         margin-right: 0; }
+  body .footer {
+    position: absolute; }
 
 /*# sourceMappingURL=login.css.map */

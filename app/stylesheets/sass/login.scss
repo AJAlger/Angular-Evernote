@@ -3,12 +3,12 @@ $visual-grid: false;
 @import "bourbon";
 @import "neat";
 $font: 'Nixie one', cursive;
-$font-color: white;
+$font-color: #2dbe60;
 
 
 body {
 
-  background-color: #2dbe60;
+  background-color: #fff;
 
   #particles-js {
     height: 100%;
@@ -34,11 +34,19 @@ body {
       text-align: center;
       @include position(fixed, 420px null null null);
       font-family: $font;
-      color: #333333;
+      color: #fff;
       padding: 10px;
       font-size: 1.2em;
-      background-color: #fff;
+      background-color: #2dbe60;
+      @include border-top-radius(5px);
+      @include border-bottom-radius(5px);
     }
   }
+
+  .footer {
+    position: absolute;
+
+  }
+
 }
 
