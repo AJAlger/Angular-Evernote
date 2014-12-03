@@ -2,11 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="52501169-4bda-49df-9cd8-7082be98fdfa" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/9f8d7372547ac3b8c2ea0ed1273a873b0530ddc3/login.scssc" afterPath="$PROJECT_DIR$/.sass-cache/9f8d7372547ac3b8c2ea0ed1273a873b0530ddc3/login.scssc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/stylesheets/css/login.css.map" afterPath="$PROJECT_DIR$/app/stylesheets/css/login.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/stylesheets/css/login.css" afterPath="$PROJECT_DIR$/app/stylesheets/css/login.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/login.html" afterPath="$PROJECT_DIR$/app/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/stylesheets/sass/login.scss" afterPath="$PROJECT_DIR$/app/stylesheets/sass/login.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="evernote-express.iws" />
@@ -34,8 +29,8 @@
       <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.75" vertical-offset="0" max-vertical-offset="540">
-              <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
+            <state vertical-scroll-proportion="-9.375" vertical-offset="0" max-vertical-offset="540">
+              <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#a#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -56,8 +51,8 @@
       <file leaf-file-name="config.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.12116317" vertical-offset="0" max-vertical-offset="619">
-              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0726979" vertical-offset="0" max-vertical-offset="619">
+              <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -99,9 +94,9 @@
         <option value="$PROJECT_DIR$/app/stylesheets/css/login.css" />
         <option value="$PROJECT_DIR$/app/index.html" />
         <option value="$PROJECT_DIR$/app/scripts/script.js" />
-        <option value="$PROJECT_DIR$/app/login.html" />
         <option value="$PROJECT_DIR$/app/stylesheets/sass/login.scss" />
         <option value="$PROJECT_DIR$/config.json" />
+        <option value="$PROJECT_DIR$/app/login.html" />
       </list>
     </option>
   </component>
@@ -2811,16 +2806,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.75" vertical-offset="0" max-vertical-offset="540">
-          <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#a#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/stylesheets/sass/login.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-22.666666" vertical-offset="161" max-vertical-offset="870">
@@ -2829,10 +2814,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.375" vertical-offset="0" max-vertical-offset="540">
+          <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#a#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/config.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12116317" vertical-offset="0" max-vertical-offset="619">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0726979" vertical-offset="0" max-vertical-offset="619">
+          <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
           <folding />
         </state>
       </provider>
