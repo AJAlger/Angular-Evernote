@@ -8,6 +8,28 @@ body {
   body #particles-js {
     height: 100%;
     width: 100%; }
+    body #particles-js .login-title {
+      max-width: 68em;
+      margin-left: auto;
+      margin-right: auto;
+      font-family: "Nixie one", cursive;
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 31.76157%;
+      margin-left: 34.11922%;
+      text-align: center;
+      position: fixed;
+      top: 300px;
+      color: white;
+      font-weight: 300;
+      font-size: 3em; }
+      body #particles-js .login-title:after {
+        content: "";
+        display: table;
+        clear: both; }
+      body #particles-js .login-title:last-child {
+        margin-right: 0; }
     body #particles-js .container {
       float: left;
       display: block;
@@ -26,7 +48,9 @@ body {
       margin-left: 34.11922%;
       text-align: center;
       position: fixed;
-      top: 420px; }
+      top: 420px;
+      font-family: "Nixie one", cursive;
+      color: white; }
       body #particles-js .login-panel:after {
         content: "";
         display: table;
