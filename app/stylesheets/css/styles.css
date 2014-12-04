@@ -3,7 +3,12 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-.textarea1 {
+.md-whiteframe-z1 {
+  margin: 0;
+  padding: 20px;
+  background-color: #2dbe60; }
+
+.heading {
   max-width: 68em;
   margin-left: auto;
   margin-right: auto;
@@ -11,9 +16,9 @@
   text-align: center;
   font-size: 4em;
   color: #2dbe60;
-  padding-top: 30px;
+  padding-top: 70px;
   padding-bottom: 30px; }
-  .textarea1:after {
+  .heading:after {
     content: "";
     display: table;
     clear: both; }
@@ -21,15 +26,16 @@
 textarea {
   font-family: "Nixie One", cursive; }
 
-.textarea2 {
+.text-box {
   max-width: 68em;
   margin-left: auto;
-  margin-right: auto; }
-  .textarea2:after {
+  margin-right: auto;
+  text-align: center; }
+  .text-box:after {
     content: "";
     display: table;
     clear: both; }
-  .textarea2 .speech-box {
+  .text-box .speech-box {
     border: 1px solid #2dbe60;
     width: auto;
     height: 200px;
@@ -40,63 +46,22 @@ textarea {
     margin-left: 21.32451%;
     padding-bottom: 50px;
     font-size: 1.2em; }
-    .textarea2 .speech-box:last-child {
+    .text-box .speech-box:last-child {
       margin-right: 0; }
-  .textarea2 .text-buttons {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 65.88078%;
-    margin-left: 17.05961%;
-    position: relative;
-    top: 50px; }
-    .textarea2 .text-buttons:last-child {
-      margin-right: 0; }
-    .textarea2 .text-buttons .button1 {
-      margin-right: 0;
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 23.23176%;
-      margin-left: 23.03047%;
-      text-align: center;
-      font-family: "Nixie One", cursive;
-      color: #fff;
-      padding: 10px;
-      font-size: 1.2em;
-      background-color: #2dbe60;
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
-      border-bottom-left-radius: 5px;
-      border-bottom-right-radius: 5px;
-      -webkit-box-shadow: 0 3px 7px 1px rgba(130, 130, 130, 0.75);
-      -moz-box-shadow: 0 3px 7px 1px rgba(130, 130, 130, 0.75);
-      box-shadow: 0 3px 7px 1px rgba(130, 130, 130, 0.75);
-      margin-right: 50px; }
-      .textarea2 .text-buttons .button1:last-child {
-        margin-right: 0; }
-    .textarea2 .text-buttons .button2 {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 23.23176%;
-      margin-right: 0;
-      text-align: center;
-      font-family: "Nixie One", cursive;
-      color: #fff;
-      padding: 10px;
-      font-size: 1.2em;
-      background-color: #2dbe60;
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
-      border-bottom-left-radius: 5px;
-      border-bottom-right-radius: 5px;
-      -webkit-box-shadow: 0 3px 7px 1px rgba(130, 130, 130, 0.75);
-      -moz-box-shadow: 0 3px 7px 1px rgba(130, 130, 130, 0.75);
-      box-shadow: 0 3px 7px 1px rgba(130, 130, 130, 0.75); }
-      .textarea2 .text-buttons .button2:last-child {
-        margin-right: 0; }
-  .textarea2 .subtext {
+
+.sub {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; }
+  .sub:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .sub .subtext {
+    max-width: 68em;
+    margin-left: auto;
+    margin-right: auto;
     font-family: "Nixie One", cursive;
     font-size: 1.5em;
     text-align: center;
@@ -107,7 +72,65 @@ textarea {
     margin-right: 2.35765%;
     width: 57.35098%;
     margin-left: 21.32451%; }
-    .textarea2 .subtext:last-child {
+    .sub .subtext:after {
+      content: "";
+      display: table;
+      clear: both; }
+    .sub .subtext:last-child {
+      margin-right: 0; }
+
+.text-buttons {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  top: 30px;
+  text-align: center; }
+  .text-buttons:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .text-buttons .button1 {
+    display: inline;
+    margin-right: 10px; }
+  .text-buttons .button2 {
+    display: inline; }
+  .text-buttons .button {
+    width: 150px;
+    text-align: center;
+    font-family: "Nixie One", cursive;
+    color: #fff;
+    padding: 10px;
+    font-size: 1.2em;
+    background-color: #2dbe60;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    text-transform: capitalize; }
+
+.response {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  top: 60px; }
+  .response:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .response .message {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+    margin-left: 34.11922%;
+    color: #000000;
+    text-align: center;
+    font-size: 1.3em;
+    font-family: "Nixie One", cursive;
+    padding: 20px 0; }
+    .response .message:last-child {
       margin-right: 0; }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,52 +1,53 @@
 $visual-grid: false;
+$visual-grid-index: front;
 
 @import "bourbon";
 @import "neat";
 
 $font: 'Nixie one', cursive;
-$font-color: #2dbe60;
+$color: #2dbe60;
 
-body {
+  .md-whiteframe-z1 {
+    margin: 0;
+    padding: 20px;
+    background-color: $color;
+  }
 
-  background-color: #fff;
 
-  #particles-js {
-    height: 100%;
-    width: 100%;
+  .login-text {
+    @include outer-container;
 
     .login-title {
-      @include outer-container;
+      @include span-columns(7);
+      @include shift(2.5);
       font-family: $font;
-      @include span-columns(4);
-      @include shift(4);
       text-align: center;
-      @include position(fixed, 300px null null null);
-      color: $font-color;
+      @include position(relative, 300px null null null);
+      color: $color;
       font-weight: 300;
       font-size: 3em;
-
     }
+  }
 
-    .login-panel {
+    .button1 {
       @include outer-container;
-      @include span-columns(2);
-      @include shift(5);
+      @include position(relative, 350px null null null);
       text-align: center;
-      @include position(fixed, 420px null null null);
-      font-family: $font;
-      color: #fff;
-      padding: 10px;
-      font-size: 1.2em;
-      background-color: #2dbe60;
-      @include border-top-radius(5px);
-      @include border-bottom-radius(5px);
+
+      .login-panel {
+        width: 150px;
+        text-align: center;
+        font-family: $font;
+        color: #fff;
+        padding: 10px;
+        font-size: 1.2em;
+        background-color: $color;
+        @include border-top-radius(5px);
+        @include border-bottom-radius(5px);
+        text-transform: capitalize;
+      }
     }
-  }
 
-  .footer {
-    position: absolute;
 
-  }
 
-}
 

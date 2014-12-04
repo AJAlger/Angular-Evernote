@@ -1,5 +1,5 @@
 
-var evervoice = angular.module('evervoiceApp', ['ngMaterial']);
+var evervoice = angular.module('evervoiceApp', ['ngMaterial', 'ngAnimate']);
 
 evervoice.config(function($httpProvider) {
 
@@ -25,23 +25,12 @@ evervoice.controller('myCtrl', ['$scope', 'voiceRecord', '$http', function($scop
        $http.post('/postNote', speechText)
            .success(function (speechText, status){
                console.log('success', status);
+               $scope.message = 'Note Successfully Sent';
            })
            .error(function (speechText, status){
                console.log('error', status);
            });
 
-       // $http({
-       //   method: 'POST',
-       // url: '/postNote',
-       //  data: speechText})
-       //  .success(function(data, status) {
-       //  console.log('success', status);
-       //  console.log(data);})
-       //   .error(function(data, status) {
-       //   console.log('error', status);
-       //    console.log(data);
-       // });
-       // };
    };
 
 }]);

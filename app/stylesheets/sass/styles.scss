@@ -1,4 +1,6 @@
 $visual-grid: false;
+$visual-grid-index: front;
+
 
 @import "bourbon";
 @import "neat";
@@ -7,20 +9,27 @@ $visual-grid: false;
 $font: 'Nixie One', cursive;
 $color: #2dbe60;
 
-.textarea1 {
+.md-whiteframe-z1 {
+  margin: 0;
+  padding: 20px;
+  background-color: $color;
+}
+
+.heading {
   @include outer-container;
   font-family: $font;
   text-align: center;
   font-size: 4em;
   color: $color;
-  @include padding(30px null 30px null);
+  @include padding(70px null 30px null);
 }
 textarea {
   font-family: $font;
 
 }
-.textarea2 {
+.text-box {
   @include outer-container;
+  text-align: center;
 
   .speech-box {
     border: 1px solid $color;
@@ -29,41 +38,15 @@ textarea {
     @include shift(2.5);
     @include padding(null null 50px null);
     font-size: 1.2em;
+  }
+}
 
-  }
-  .text-buttons {
-    @include span-columns(8);
-    @include shift(2);
-    @include position(relative, 50px null null null);
+.sub {
+  @include outer-container;
+  text-align: center;
 
-  .button1 {
-    @include omega();
-    @include span-columns(3);
-    @include shift(2.7);
-    text-align: center;
-    font-family: $font;
-    color: #fff;
-    padding: 10px;
-    font-size: 1.2em;
-    background-color: $color;
-    margin-right: 50px;
-    @include border-top-radius(5px);
-    @include border-bottom-radius(5px);
-  }
-    .button2 {
-      @include span-columns(3);
-      @include omega();
-      text-align: center;
-      font-family: $font;
-      color: #fff;
-      padding: 10px;
-      font-size: 1.2em;
-      background-color: $color;
-      @include border-top-radius(5px);
-      @include border-bottom-radius(5px);
-    }
-  }
   .subtext {
+    @include outer-container;
     font-family: $font;
     font-size: 1.5em;
     text-align: center;
@@ -72,6 +55,54 @@ textarea {
     @include shift(2.5);
   }
 }
+
+  .text-buttons {
+    @include outer-container;
+    @include position(relative, 30px null null null);
+    text-align: center;
+
+    .button1 {
+      display: inline;
+      margin-right: 10px;
+    }
+
+    .button2 {
+      display: inline;
+    }
+
+      .button {
+        width: 150px;
+        text-align: center;
+        font-family: $font;
+        color: #fff;
+        padding: 10px;
+        font-size: 1.2em;
+        background-color: $color;
+        @include border-top-radius(5px);
+        @include border-bottom-radius(5px);
+        text-transform: capitalize;
+      }
+    }
+
+  .response {
+    @include outer-container;
+    @include position(relative, 60px null null null);
+
+    .message {
+      @include span-columns(4);
+      @include shift(4);
+      color: #000000;
+      text-align: center;
+      font-size: 1.3em;
+      font-family: $font;
+      padding: 20px 0;
+    }
+  }
+
+
+
+
+
 
 
 
