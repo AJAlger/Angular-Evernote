@@ -1,8 +1,8 @@
 
-var evervoice = angular.module('evervoiceApp', []);
+var evervoice = angular.module('evervoiceApp', ['ngMaterial']);
 
 evervoice.config(function($httpProvider) {
-   console.log($httpProvider.defaults.headers.post);
+
 });
 
 evervoice.controller('myCtrl', ['$scope', 'voiceRecord', '$http', function($scope, voiceRecord, $http) {

@@ -30,3 +30,6 @@ var express_port = 9000;
 
 
 If you have any suggestions, feel free to email me or send a pull request. It is the aim of this project to continue to develop. I hope to add APIs for Twitter and possibly Facebook soon.
+
+##License
+MIT
