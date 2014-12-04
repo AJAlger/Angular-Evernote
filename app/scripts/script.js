@@ -18,6 +18,7 @@ evervoice.controller('myCtrl', ['$scope', 'voiceRecord', '$http', function($scop
 //////////////////// Dictate Button ////////////////////
     $scope.dictate = function() { // WORKING DICTATE BUTTON
         voiceRecord.startRecognition();
+        $scope.message = '';
     };
 /////////////////// Evernote Button ////////////////////
    $scope.createNote = function() { // WORKING POST BUTTON
