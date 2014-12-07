@@ -12,7 +12,6 @@ evervoice.controller('myCtrl', ['$scope', 'voiceRecord', '$http', function($scop
     voiceRecord.setListener(function(value) { // WORKING LISTENER PATTERN
         $scope.$apply(function() {
             $scope.interimTranscript = value;
-            console.log('Transcript: ', $scope.interimTranscript);
         });
     });
 //////////////////// Dictate Button ////////////////////
@@ -35,7 +34,6 @@ evervoice.controller('myCtrl', ['$scope', 'voiceRecord', '$http', function($scop
    };
 
 }]);
-
 
 
 /////////////////// Web Speech API ////////////////////
