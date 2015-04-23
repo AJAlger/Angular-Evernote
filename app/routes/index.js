@@ -1,7 +1,7 @@
 var Evernote = require('evernote').Evernote;
 
 var config = require('../../cf.json');
-var callbackUrl = "https://evervoice-app.herokuapp.com/oauth_callback";
+var callbackUrl = "https://evervoice-app.herokuapp.com/oauth_callback"; //change to localhost:9000 in development
 
 // home page
 exports.index = function(req, res) {
