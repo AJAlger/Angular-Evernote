@@ -1,3 +1,14 @@
+/*
+**
+* This is a pretty simple app that I developed a few months ago as a capstone project when I was enrolled in
+* Bloc's front-end development program. It uses angular in this file, but it is not separated by controller and
+* service because I hadn't learnt that yet. I have done this with subsequent projects. In addition, the use of $scope
+* is in this project, which I now do not use. In fact, it is probably better to refactor the code using John Papa's
+* style guide, which contains some important lessons when developing your Angular project. In any case, this project
+* is for demonstration purposes, and any suggestions on how to make it better, or some ideas about what you would like
+* to see added, are more than appreciated.
+ */
+
 
 var evervoice = angular.module('evervoiceApp', ['ngMaterial', 'ngAnimate']);
 
