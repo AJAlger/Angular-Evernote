@@ -22,7 +22,7 @@ $color: #2dbe60;
       @include shift(2.5);
       font-family: $font;
       text-align: center;
-      @include position(relative, 300px null null null);
+      @include position(relative, 100px null null null);
       color: $color;
       font-weight: 300;
       font-size: 3em;
@@ -31,7 +31,7 @@ $color: #2dbe60;
 
     .button1 {
       @include outer-container;
-      @include position(relative, 350px null null null);
+      @include position(relative, 150px null null null);
       text-align: center;
 
       .login-panel {

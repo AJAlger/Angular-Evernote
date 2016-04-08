@@ -1,7 +1,7 @@
 var Evernote = require('evernote').Evernote;
-
 var config = require('../../cf.json');
-var callbackUrl = "https://evervoice-app.herokuapp.com/oauth_callback"; //change to localhost:9000 in development
+//var callbackUrl = "https://evervoice-app.herokuapp.com/oauth_callback"; //change to localhost:9000 in development
+var callbackUrl = "http://localhost:9000/oauth_callback";
 
 // home page
 exports.index = function(req, res) {
@@ -53,7 +53,7 @@ exports.oauth_callback = function(req, res) {
     client.getAccessToken(
         req.session.oauthToken,
         req.session.oauthTokenSecret,
-        req.param('oauth_verifier'),
+        req.query['oauth_verifier'],
         function(error, oauthAccessToken, oauthAccessTokenSecret, results) {
             if(error) {
                 console.log('error');
