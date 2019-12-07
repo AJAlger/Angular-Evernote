@@ -2,7 +2,6 @@
 
 This app uses the Evernote API, AngularJS, Gulp, NodeJS and ExpressJS to use the Evernote API with the Speech Recognition API on Chrome. I have also included Bourbon and Neat to run in NodeJS.
 
-###
 The landing login and app pages have been customized using Angular Material. It is extremely basic. If you want to use the project, you can change the values in the ```config.json``` file. However, you will have to create your own Evernote developer account. The Heroku project works and you can sign-in to your own Evernote account.
 
 Additionally, you can configure the port using the ```gulpfile.js``` or in ```app.js```. You can add all sorts of options in ```index.js``` located in ```app/routes```. See http://dev.evernote.com.
@@ -26,7 +25,7 @@ You may want to change the ```callbackURL```. You will have to change it when yo
 
 If you have any suggestions, feel free to email me or send a pull request. It is the aim of this project to continue to develop. I hope to add APIs for Twitter and possibly Facebook soon.
 
-##License
+## License
 The MIT License (MIT)
 
 Copyright (c) 2015 Abdullah J. Alger
